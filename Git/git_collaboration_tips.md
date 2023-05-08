@@ -76,3 +76,5 @@
   git branch -d my-feature-branch
   git push origin --delete my-feature-branch
   ```
+
+- **Use issues:** Use issues to track bugs, feature requests, and other tasks, and to assign tasks to specific people.
