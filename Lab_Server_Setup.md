@@ -1,4 +1,4 @@
-# Setting Up and Using Visual Studio Code (VS Code) with SSH
+# Setting Up and Using Visual Studio Code (VS Code) with SSH and Git
 
 ## Step 1: Install Visual Studio Code on Your Local Machine
 
