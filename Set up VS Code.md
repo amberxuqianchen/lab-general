@@ -23,7 +23,7 @@ After the SSH extension is installed, you can use it to connect to a remote serv
 
 - Click on the green button in the bottom left corner (it should look like "><").
 - Choose "Remote-SSH: Connect to Host..." from the drop-down list.
-- Enter the SSH command for your server in the format `username@hostname` (replace "username" with your username and "hostname" with the IP address or domain of your server). In the case of YES Lab, it's psych-ads\\[username]@yeslab1.psych.ucsb.edu
+- Enter the SSH command for your server in the format `username@hostname` (replace "username" with your username and "hostname" with the IP address or domain of your server). In the case of YES Lab, it's psych-ads\\[username]@yeslab1.psych.ucsb.edu (could be single or double backslash)
 - Press Enter. If you're connecting to the server for the first time, you'll have to confirm that you trust the server.
 - Enter your password when prompted.
 
