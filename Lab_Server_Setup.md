@@ -1,6 +1,6 @@
 # Setting Up and Using Visual Studio Code (VS Code) with SSH
 
-## Step 1: Install Visual Studio Code
+## Step 1: Install Visual Studio Code on Your Local Machine
 
 First, you need to install Visual Studio Code on your local machine. 
 
@@ -29,7 +29,23 @@ After the SSH extension is installed, you can use it to connect to a remote serv
 
 Now, you should be connected to your remote server via SSH in Visual Studio Code.
 
+## Step 4: Environment Setup
+- Note that lab members don't normally have adminstrative permission, you would want to avoid running `sudo`, `apt`, etc. Email psy help if you want to install something that needs admin permission.
+### 4.1 [Anaconda](https://docs.anaconda.com/free/anaconda/install/linux/) for Programming such as Python: 
+- Download the installer from the website;
+- Search for “terminal” in your applications and click to open;
+- Type `cd Downloads` and press Enter (or any location the installer is downloaded to);
+- Type `bash Anaconda...` (finish the installer file name or just press Tab for autocompletion) and press Enter
+- Follow everything prompted and you should be set for Anaconda
+### 4.2 [Git](https://docs.github.com/en/get-started/quickstart/set-up-git#setting-up-git): 
+- Follow the github instruction
+- Once you have your github setup, let lab-manager/PI knows your username so we can add you to the lab account.
+
+
 ## Basic Operations
+
+### Terminal basic commands
+source: https://towardsdatascience.com/17-terminal-commands-every-programmer-should-know-4fc4f4a5e20e
 
 ### Opening a File
 
@@ -37,18 +53,13 @@ To open a file in Visual Studio Code:
 
 - Go to the File menu and click on Open File.
 - Navigate to the location of your file, select it, and click Open.
+- When SSH to lab server, you may need to refresh if you create/delete files to see the changes.
 
 ### Saving a File
 
 To save changes to a file:
 
 - Go to the File menu and click on Save. You can also use the shortcut Ctrl+S (Command+S on a Mac).
-
-### Running a Python Script
-
-To run a Python script in Visual Studio Code:
-
-- Open the Python file you want to run.
-- Click on the green play button in the top-right corner of the code editor.
+- It's recommended that you change the auto save settings to delay mode (1000ms).
 
 Remember to save your work often and commit your changes to your version control system (like Git) if you're using one.

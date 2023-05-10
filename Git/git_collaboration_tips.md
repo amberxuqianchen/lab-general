@@ -1,5 +1,5 @@
 # How to Contribute to An Existing Repository: A Step-by-Step Guide for Social Scientists
-
+source: https://docs.github.com/en/get-started/quickstart/contributing-to-projects
 ## Step 1: Familiarize yourself with the project
 - Read the project's documentation (README.md) to understand its purpose and overall functionality.
 - Learn about the Python scripts used in the project and their respective roles.
