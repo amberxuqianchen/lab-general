@@ -30,22 +30,24 @@ After the SSH extension is installed, you can use it to connect to a remote serv
 Now, you should be connected to your remote server via SSH in Visual Studio Code.
 
 ## Step 4: Environment Setup
-- Note that lab members don't normally have adminstrative permission, you would want to avoid running `sudo`, `apt`, etc. Email psy help if you want to install something that needs admin permission.
+- Make sure you are connected to the lab server. 
+- Note that lab members don't don't have root access or admin permission, you would want to avoid running `sudo`, `apt`, etc. Email psy help if you want to install something that needs admin permission.
 ### 4.1 [Anaconda](https://docs.anaconda.com/free/anaconda/install/linux/) for Programming such as Python: 
-- Download the installer from the website;
+- Download the installer from [Anaconda](https://docs.anaconda.com/free/anaconda/install/linux/);
 - Search for “terminal” in your applications and click to open;
 - Type `cd Downloads` and press Enter (or any location the installer is downloaded to);
 - Type `bash Anaconda...` (finish the installer file name or just press Tab for autocompletion) and press Enter
 - Follow everything prompted and you should be set for Anaconda
 ### 4.2 [Git](https://docs.github.com/en/get-started/quickstart/set-up-git#setting-up-git): 
-- Follow the github instruction
+- Follow the github [instruction](https://docs.github.com/en/get-started/quickstart/set-up-git#setting-up-git);
 - Once you have your github setup, let lab-manager/PI knows your username so we can add you to the lab account.
 
 
 ## Basic Operations
 
 ### Terminal basic commands
-source: https://towardsdatascience.com/17-terminal-commands-every-programmer-should-know-4fc4f4a5e20e
+- source: https://towardsdatascience.com/17-terminal-commands-every-programmer-should-know-4fc4f4a5e20e
+- TBD
 
 ### Opening a File
 

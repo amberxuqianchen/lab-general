@@ -29,4 +29,4 @@ This repository contains source codes and documents related to using Git and Git
 This repository is still under development. Please contribute by creating pull requests with proposed improvements or additions, or by opening issues to share your feedback and report bugs.
 
 ## More:
-- [An overview of Git/Github by Yibei](https://github.com/yibeichan/reproducibilitea_workshop/blob/main/ReproducibiliTea_05102023.pdf)
+- [An introduction of Git/Github by Yibei's ReproducibiliTea Workshop](https://github.com/yibeichan/reproducibilitea_workshop/blob/main/ReproducibiliTea_05102023.pdf)
