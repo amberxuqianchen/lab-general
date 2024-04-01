@@ -44,7 +44,8 @@ Now, you should be connected to your remote server via SSH in Visual Studio Code
 
 ## Step 5: Use matlab (optional)
 1. type `matlab` to see if it has been installed.
-2. Use X11 forwarding or VNC to get GUI (optional). Open terminal, type `ssh -X username@hostname` note the "X".
+2. (optional) Use X11 forwarding or VNC to get GUI. 
+3. (optional) After setting up X11 forwarding, open terminal, type `ssh -X username@hostname` note the "X".
 If your mac is M chips and using X11 forwarding with XQuartz, do the following to fix the black background:
     - create a file "java.opts" in the home folder
     - codes inside that file:
@@ -53,7 +54,7 @@ If your mac is M chips and using X11 forwarding with XQuartz, do the following t
     Dsun.java2d.pmoffscreen=false
     ```
     - restart matlab
-3. To run the script without GUI, navigate to the directory containing the Matlab scripts and run, e.g.: 
+4. To run the script without GUI, navigate to the directory containing the Matlab scripts and run, e.g.: 
     ```
     matlab -nodisplay -nosplash -r "run('kappa_estimate_aggression.m'); exit;"
     ```
