@@ -42,6 +42,20 @@ Now, you should be connected to your remote server via SSH in Visual Studio Code
 - Follow the github [instruction](https://docs.github.com/en/get-started/quickstart/set-up-git#setting-up-git);
 - Once you have your github setup, let lab-manager/PI knows your username so we can add you to the lab account.
 
+## Step 5: Use matlab (optional)
+1. type `matlab` to see if it has been installed.
+2. Use X11 forwarding or VNC to get GUI (optional). If your mac is M chips and using X11 forwarding with XQuartz, do the following to fix the black background:
+    - create a file "java.opts" in the home folder
+    - codes inside that file:
+    ```
+    Dsun.java2d.xrender=false
+    Dsun.java2d.pmoffscreen=false
+    ```
+    - restart matlab
+3. Navigate to the directory containing the Matlab scripts, e.g.: 
+    ```
+    matlab -nodisplay -nosplash -r "run('kappa_estimate_aggression.m'); exit;"
+    ```
 
 ## Basic Operations
 
