@@ -44,7 +44,7 @@ Now, you should be connected to your remote server via SSH in Visual Studio Code
 - Follow the github [instruction](https://docs.github.com/en/get-started/quickstart/set-up-git#setting-up-git);
 - Once you have your github setup, let lab-manager/PI knows your username so we can add you to the lab account.
 
-## Step 5: Use matlab (optional)
+## Step 5.1: Use matlab (optional)
 1. type `matlab` to see if it has been installed.
 2. (optional) Use X11 forwarding or VNC to get GUI. 
 3. (optional) After setting up X11 forwarding, open terminal, type `ssh -X username@hostname` note the "X".
@@ -60,7 +60,10 @@ If your mac is M chips and using X11 forwarding with XQuartz, do the following t
     ```
     matlab -nodisplay -nosplash -r "run('kappa_estimate_aggression.m'); exit;"
     ```
-
+## Step 5.2: Use R (optional)
+under the base environment, run `Rscript [rscript.r]`
+    - other options include radian and rlanguageserver, but it takes time to set up the environment.
+    - for exploratary analysis with R, I personally use R Studio on my own laptop.
 ## Basic Operations
 
 ### Terminal basic commands
