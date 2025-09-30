@@ -1,5 +1,8 @@
 # Setting Up and Using Visual Studio Code (VS Code) with SSH and Git
 
+> **Important Note:**  
+> Please put all large files, especially fmriprep files, in the `YES_lab/[YourName]` directory on the server, instead of any other folders in your root directory. This helps keep the shared space organized and prevents storage issues for other lab members.
+
 ## Step 1: Install Visual Studio Code on Your Local Machine
 
 First, you need to install Visual Studio Code on your local machine. 
