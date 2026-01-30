@@ -30,3 +30,6 @@ This repository is still under development. Please contribute by creating pull r
 
 ## More:
 - [An introduction of Git/Github by Yibei's ReproducibiliTea Workshop](https://github.com/yibeichan/reproducibilitea_workshop/blob/main/ReproducibiliTea_05102023.pdf)
+
+## One more thing......
+If you find this guidance useful, feel free to give the repo a ⭐.
