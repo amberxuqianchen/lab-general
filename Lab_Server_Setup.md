@@ -89,3 +89,6 @@ To save changes to a file:
 - It's recommended that you change the auto save settings to delay mode (1000ms).
 
 Remember to save your work often and commit your changes to your version control system (like Git) if you're using one.
+
+## One more thing......
+If you find this guidance useful, feel free to give the repo a ⭐ :)
