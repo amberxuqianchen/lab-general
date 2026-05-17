@@ -67,6 +67,7 @@ If your mac is M chips and using X11 forwarding with XQuartz, do the following t
 under the base environment, run `Rscript [rscript.r]`
     - other options include radian and rlanguageserver, but it takes time to set up the environment.
     - for exploratary analysis with R, I personally use R Studio on my own laptop.
+    - for my personal notes, if running rmarkdowm rendering, use conda environment R.
 ## Basic Operations
 
 ### Terminal basic commands
