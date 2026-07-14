@@ -1,0 +1,10 @@
+# Deny direct access to data files
+# This prevents anyone from browsing to the data directory via web browser
+
+Order Deny,Allow
+Deny from all
+
+# Allow access only from PHP scripts on this server
+<FilesMatch "\.(php)$">
+    Allow from all
+</FilesMatch>
