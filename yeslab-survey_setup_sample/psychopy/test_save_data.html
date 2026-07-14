@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Data Saving - PsychoPy Sample</title>
+</head>
+<body>
+    <h1>PsychoPy Sample - Data Saving Test</h1>
+    <p>Posts a sample <code>{ filename, data }</code> CSV payload to <code>save_data.php</code>
+       (guilt_expectation_trait_task pattern).</p>
+    <button onclick="testDataSaving()">Test Save Data</button>
+    <div id="result" style="margin-top: 20px; padding: 10px; background: #f0f0f0;"></div>
+
+    <script>
+        function testDataSaving() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Sending test data...';
+
+            const filename = 'TEST_PID_sample_task_' + Date.now() + '.csv';
+            const csvData = '\uFEFFparticipant,ResponseID,PROLIFIC_PID,session,trial_index,rt\n' +
+                'TEST_PID,R_TEST,TEST_PID,1,0,1234\n';
+
+            fetch('save_data.php', {
+                method: 'POST',
+                body: JSON.stringify({ filename: filename, data: csvData }),
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('HTTP ' + response.status + ': ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(result => {
+                if (result.success) {
+                    resultDiv.innerHTML =
+                        '<h3 style="color: green;">SUCCESS</h3>' +
+                        '<p><strong>File saved:</strong> ' + result.filename + '</p>' +
+                        '<p><strong>Bytes written:</strong> ' + result.bytes + '</p>' +
+                        '<p>Check the <code>data/</code> directory on your server.</p>';
+                } else {
+                    resultDiv.innerHTML =
+                        '<h3 style="color: red;">ERROR</h3>' +
+                        '<p>' + result.error + '</p>';
+                }
+            })
+            .catch(error => {
+                resultDiv.innerHTML =
+                    '<h3 style="color: red;">NETWORK ERROR</h3>' +
+                    '<p>' + error.message + '</p>' +
+                    '<p><strong>Common causes:</strong> use <code>php -S localhost:8000</code>, ' +
+                    'not <code>python -m http.server</code>; ensure <code>save_data.php</code> is in this folder.</p>';
+            });
+        }
+    </script>
+</body>
+</html>

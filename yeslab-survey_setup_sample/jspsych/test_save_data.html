@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Data Saving</title>
+</head>
+<body>
+    <h1>Data Saving Test</h1>
+    <p>Posts a sample JSON trial array to <code>save_data.php</code> (jsPsych / congress_semantic pattern).</p>
+    <button onclick="testDataSaving()">Test Save Data</button>
+    <div id="result" style="margin-top: 20px; padding: 10px; background: #f0f0f0;"></div>
+
+    <script>
+        function testDataSaving() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Sending test data...';
+
+            const pid = 'TEST_' + Date.now();
+            const testData = [
+                {
+                    participant_id: pid,
+                    experiment_version: '1.0',
+                    experiment_start_time: new Date().toISOString(),
+                    task: 'test',
+                    trial_index: 0,
+                    trial_type: 'test-trial',
+                    response: 'space',
+                    rt: 1234
+                },
+                {
+                    participant_id: pid,
+                    experiment_version: '1.0',
+                    experiment_start_time: new Date().toISOString(),
+                    task: 'rating',
+                    stimulus_name: 'sample_stimulus',
+                    response: 5,
+                    trial_index: 1,
+                    trial_type: 'rating-trial',
+                    rt: 2345
+                }
+            ];
+
+            console.log('Sending test data:', testData);
+
+            fetch('save_data.php', {
+                method: 'POST',
+                body: JSON.stringify(testData),
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            .then(response => {
+                console.log('Response status:', response.status);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(result => {
+                console.log('Server response:', result);
+
+                if (result.success) {
+                    resultDiv.innerHTML = `
+                        <h3 style="color: green;">✓ SUCCESS</h3>
+                        <p><strong>File saved:</strong> ${result.filename}</p>
+                        <p><strong>Rows saved:</strong> ${result.rows}</p>
+                        <p>Check the <code>data/</code> directory on your server.</p>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        <h3 style="color: red;">✗ ERROR</h3>
+                        <p>${result.error}</p>
+                    `;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                resultDiv.innerHTML = `
+                    <h3 style="color: red;">✗ NETWORK ERROR</h3>
+                    <p>${error.message}</p>
+                    <p><strong>Common causes:</strong></p>
+                    <ul>
+                        <li>PHP is not enabled (use <code>php -S localhost:8000</code>, not <code>python -m http.server</code>)</li>
+                        <li>save_data.php is missing or not in the same folder</li>
+                        <li>CORS policy blocking the request</li>
+                        <li>Web server not running</li>
+                    </ul>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>
